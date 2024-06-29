@@ -110,6 +110,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Vanilla apps
+PRODUCT_PACKAGES += \
+    Dialer \
+    Messaging \
+    Contacts \
+    DeskClock \
+    webview
+
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi439/Mi439-vendor.mk)
 
