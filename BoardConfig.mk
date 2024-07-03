@@ -160,3 +160,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
 include vendor/xiaomi/Mi439/BoardConfigVendor.mk
+
+# Lawnchair Fix
+DONT_UNCOMPRESS_PRIV_APPS_DEXS=true
