@@ -32,8 +32,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     WebViewGoogle \
     WebViewGoogle-Stub \
     HealthIntelligenceStubPrebuilt \
-    QuickSearchBox \
-    Launcher3QuickStep
+    QuickSearchBox
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
