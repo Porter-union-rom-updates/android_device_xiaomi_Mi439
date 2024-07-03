@@ -110,10 +110,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages \
     Accord \
-    FossifyGallery \
-    HeliBoard \
-    CalcYou \
-    Datura
+    CalcYou
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
