@@ -5,13 +5,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_Mi439.mk \
-    $(LOCAL_DIR)/blaze_Mi439_4_19.mk
+    $(LOCAL_DIR)/lineage_Mi439.mk \
+    $(LOCAL_DIR)/lineage_Mi439_4_19.mk
 
 COMMON_LUNCH_CHOICES := \
-    blaze_Mi439-user \
-    blaze_Mi439-userdebug \
-    blaze_Mi439-eng \
-    blaze_Mi439_4_19-user \
-    blaze_Mi439_4_19-userdebug \
-    blaze_Mi439_4_19-eng
+    lineage_Mi439-user \
+    lineage_Mi439-userdebug \
+    lineage_Mi439-eng \
+    lineage_Mi439_4_19-user \
+    lineage_Mi439_4_19-userdebug \
+    lineage_Mi439_4_19-eng
