@@ -41,7 +41,7 @@ PRODUCT_NO_CAMERA := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_CHIPSET="SDM439" \
-    RISING_MAINTAINER="Phantom"
+    RISING_MAINTAINER="PHANTOM"
 
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
