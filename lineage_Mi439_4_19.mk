@@ -32,6 +32,10 @@ PRODUCT_MODEL := SDM439
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 
+
+# Signing
+-include vendor/lineage-priv/keys/keys.mk
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
