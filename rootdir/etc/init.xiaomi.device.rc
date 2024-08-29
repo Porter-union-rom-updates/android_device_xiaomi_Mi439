@@ -1,0 +1,104 @@
+service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
+    class early_hal
+    user root
+    group root
+    oneshot
+
+# Audio
+on property:ro.vendor.xiaomi.device=pine
+    setprop vendor.audio.mixer_xml.path /vendor/etc/pine_mixer_paths_sdm439_pm8953.xml
+
+on property:ro.vendor.xiaomi.device=olive
+    setprop vendor.audio.mixer_xml.path /vendor/etc/olive_mixer_paths_sdm439_pm8953.xml
+
+# Camera
+on init
+    stop vendor.camera-provider-2-4
+
+# Camera - from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.0.2.0.QCNMIXM:user/release-keys
+on post-fs
+    # Create camera director for dualcam_calibration
+    mkdir /mnt/vendor/persist/camera
+    chown system cameraserver /mnt/vendor/persist/camera
+    chmod 0755 /mnt/vendor/persist/camera
+    chown cameraserver audio /mnt/vendor/persist/camera/rear_dc_cal_wt.bin
+    chmod 0666 /mnt/vendor/persist/camera/rear_dc_cal_wt.bin
+
+on early-boot
+    # add by yufei for dual calibration SR-QL2115-01000000567
+    chmod 0775 /data/vendor/camera
+
+#add golden bin
+on property:sys.boot_completed=1
+    mkdir /data/vendor/camera/westalgo 0777 cameraserver audio
+    mkdir /data/vendor/camera/westalgo/dof_model 0777 cameraserver audio
+    mkdir /data/vendor/camera/westalgo/rt_model 0777 cameraserver audio
+    mkdir /data/vendor/camera/westalgo/rt_model/mask 0777 cameraserver audio
+    mkdir /data/vendor/camera/westalgo/rt_model/score 0777 cameraserver audio
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin /data/vendor/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_imx486_gc2375hw.bin /data/vendor/camera/golden_rear_dc_cal_wt_imx486_gc2375hw.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_imx486_gc2375hw.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_imx486_gc2375hw.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_imx486_ov02a10.bin /data/vendor/camera/golden_rear_dc_cal_wt_imx486_ov02a10.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_imx486_ov02a10.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_imx486_ov02a10.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_s5k2l7_gc2375hw.bin /data/vendor/camera/golden_rear_dc_cal_wt_s5k2l7_gc2375hw.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_s5k2l7_gc2375hw.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_s5k2l7_gc2375hw.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_ov13b10_ov02a10.bin /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_ov02a10.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_ov02a10.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_ov02a10.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_ov13b10_gc2375hw.bin /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc2375hw.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc2375hw.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc2375hw.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_ov13b10_gc02m1hw.bin /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc02m1hw.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc02m1hw.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc02m1hw.bin
+
+# FM
+on property:hw.fm.init=*
+    write /sys/devices/virtual/fm/fm_lan_enable/lan_enable ${hw.fm.init}
+
+on property:vendor.hw.fm.ant.enable=*
+    write /sys/class/fm/fm_lan_enable/lan_enable ${vendor.hw.fm.ant.enable}
+
+# IR
+on boot
+    chown system system /dev/ir_spi
+    chown system system /dev/lirc0
+
+# LiveDisplay
+on boot
+    chown root root /sys/devices/virtual/graphics/fb0/reading_mode
+    chmod 0000 /sys/devices/virtual/graphics/fb0/reading_mode
+
+# OverlayFS
+on boot && property:ro.vendor.xiaomi.device=pine
+    mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/pine/etc/sensors/:/vendor/etc/sensors
+    mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/overlayfs/pine/etc/camera/:/vendor/etc/camera
+    enable vendor.camera-provider-2-4
+
+on boot && property:ro.vendor.xiaomi.device=olive
+    mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/olive/etc/sensors/:/vendor/etc/sensors
+    mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/overlayfs/olive/etc/camera/:/vendor/etc/camera
+    enable vendor.camera-provider-2-4
+
+# Thermal
+service thermal-engine /vendor/bin/thermal-engine-olive
+    override
+    class main
+    user root
+    group root
+    socket thermal-send-client stream 0660 system oem_2907
+    socket thermal-recv-client stream 0660 system oem_2907
+    socket thermal-recv-passive-client stream 0660 system oem_2907
+    socket thermal-send-rule stream 0660 system oem_2907

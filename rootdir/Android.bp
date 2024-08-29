@@ -1,0 +1,54 @@
+//
+// Copyright (C) 2021 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// fstab
+soong_config_module_type {
+    name: "xiaomi_mi439_rootdir_prebuilt_etc",
+    module_type: "prebuilt_etc",
+    config_namespace: "XIAOMI_MI439_ROOTDIR",
+    variables: ["KERNEL_VERSION"],
+    properties: ["src"],
+}
+
+soong_config_string_variable {
+    name: "KERNEL_VERSION",
+    values: ["k4_9", "k4_19"],
+}
+
+xiaomi_mi439_rootdir_prebuilt_etc {
+    name: "fstab.qcom",
+    soong_config_variables: {
+        KERNEL_VERSION: {
+            k4_9: {
+                src: "etc/fstab_4_9.qcom",
+            },
+            k4_19: {
+                src: "etc/fstab_4_19.qcom",
+            },
+            conditions_default: {
+                src: "etc/fstab_4_9.qcom",
+            },
+        },
+    },
+    vendor: true,
+}
+
+// Init scripts
+
+prebuilt_etc {
+    name: "init.xiaomi.device.rc",
+    src: "etc/init.xiaomi.device.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+// Configuration scripts
+
+sh_binary {
+    name: "init.xiaomi.device.sh",
+    src: "bin/init.xiaomi.device.sh",
+    vendor: true,
+}
