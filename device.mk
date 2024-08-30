@@ -113,6 +113,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Extra packages
+PRODUCT_PACKAGES += \
+    RemovePackages \
+    CalcYou
+
 # Vibrator
 ifneq ($(TARGET_KERNEL_VERSION),4.19)
 PRODUCT_PACKAGES += \
