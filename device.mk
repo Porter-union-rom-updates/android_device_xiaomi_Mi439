@@ -124,6 +124,10 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.3-service.xiaomi_mi439
 endif
 
+
+# Inherit viper4androidfx
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi439/Mi439-vendor.mk)
 
