@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Kernel
 TARGET_KERNEL_VERSION := 4.19
@@ -37,11 +37,7 @@ TARGET_VENDOR := Xiaomi
 ROM_FOLDER := lineage
 WITH_GMS := true
 TARGET_CORE_GMS := true
-PRODUCT_NO_CAMERA := false
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RISING_CHIPSET="SDM439" \
-    RISING_MAINTAINER="PHANTOM"
 
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
