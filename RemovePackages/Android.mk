@@ -11,9 +11,25 @@ LOCAL_OVERRIDES_PACKAGES := \
     Maps \
     YouTube \
     BetterBugStub \
+    CalculatorGooglePrebuilt \
+    CalendarGooglePrebuilt \
     Chrome-Stub \
+    GoogleContacts \
+    PrebuiltBugle \
+    TrichromeLibrary \
+    TrichromeLibrary-Stub \
+    GCS \
+    talkback \
+    WellbeingPrebuilt \
+    GoogleDialer \
     DeviceIntelligenceNetworkPrebuilt \
     DevicePersonalizationPrebuiltPixel2020 \
+    SafetyHubPrebuilt \
+    GoogleTTS \
+    TurboPrebuilt \
+    LatinIMEGooglePrebuilt \
+    WebViewGoogle \
+    WebViewGoogle-Stub \
     HealthIntelligenceStubPrebuilt
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
