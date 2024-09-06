@@ -33,7 +33,6 @@ PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 
 ROM_FOLDER := derp
-TARGET_USES_PICO_GAPPS := true
 TARGET_NOT_USES_BLUR := true
 
 # Signing
