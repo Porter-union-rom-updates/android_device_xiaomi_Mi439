@@ -118,6 +118,13 @@ PRODUCT_PACKAGES += \
     RemovePackages \
     CalcYou
 
+# Vanilla apps
+PRODUCT_PACKAGES += \
+    Dialer \
+    Messaging \
+    Contacts \
+    webview
+
 # Vibrator
 ifneq ($(TARGET_KERNEL_VERSION),4.19)
 PRODUCT_PACKAGES += \
