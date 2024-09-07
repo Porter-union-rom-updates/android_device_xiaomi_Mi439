@@ -15,6 +15,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     CalendarGooglePrebuilt \
     Chrome-Stub \
     GoogleContacts \
+    PrebuiltDeskClockGoogle \
     PrebuiltBugle \
     TrichromeLibrary \
     TrichromeLibrary-Stub \

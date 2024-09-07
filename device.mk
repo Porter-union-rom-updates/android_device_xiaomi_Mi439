@@ -13,11 +13,6 @@ TARGET_USES_DEVICE_SPECIFIC_GATEKEEPER := true
 # Keymaster
 TARGET_USES_DEVICE_SPECIFIC_KEYMASTER := true
 
-# Vibrator
-ifneq ($(TARGET_KERNEL_VERSION),4.19)
-TARGET_USES_DEVICE_SPECIFIC_VIBRATOR := true
-endif
-
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -30,9 +25,7 @@ PRODUCT_PACKAGES += \
     xiaomi_olive_overlay_SystemUI
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-ifneq ($(TARGET_KERNEL_VERSION),4.19)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-haptics
-endif
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1440
@@ -109,10 +102,15 @@ PRODUCT_PACKAGES += \
     init.xiaomi.device.rc \
     init.xiaomi.device.sh
 
+# Shims
+PRODUCT_PACKAGES += \
+    libhidlbase_shim
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+<<<<<<< HEAD
 # Extra packages
 PRODUCT_PACKAGES += \
     RemovePackages \
@@ -127,9 +125,19 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 ifneq ($(TARGET_KERNEL_VERSION),4.19)
+=======
+# Vanilla apps
+>>>>>>> 7d0b6ef79f03ff34d9c1c28b459e6e5977c753e6
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.3-service.xiaomi_mi439
-endif
+    Dialer \
+    Messaging \
+    Contacts \
+    DeskClock \
+    webview
+
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 
 # Inherit viper4androidfx
