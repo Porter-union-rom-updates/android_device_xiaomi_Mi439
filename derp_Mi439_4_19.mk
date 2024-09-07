@@ -34,10 +34,15 @@ PRODUCT_MODEL := SDM439
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 
+<<<<<<< HEAD:derp_Mi439_4_19.mk
 ROM_FOLDER := derp
 TARGET_USES_PICO_GAPPS := true
 TARGET_NOT_USES_BLUR := true
 
+=======
+ROM_FOLDER := lineage
+WITH_GMS := false
+>>>>>>> 27729e77c4a887a3079ecc8b3656c96fcdef6ceb:lineage_Mi439_4_19.mk
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
 

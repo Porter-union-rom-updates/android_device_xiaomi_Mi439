@@ -106,6 +106,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhidlbase_shim
 
+# Extra packages
+PRODUCT_PACKAGES += \
+    RemovePackages \
+    Accord \
+    CalcYou
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -145,6 +151,9 @@ $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi439/Mi439-vendor.mk)
+
+# Inherit viper4androidfx
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # EXTRA: MiuiCamera
 ifneq ($(wildcard vendor/miuicamera/config.mk),)
