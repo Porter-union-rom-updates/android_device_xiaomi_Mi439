@@ -35,13 +35,7 @@ PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 
 ROM_FOLDER := lineage
-WITH_GMS := true
-TARGET_CORE_GMS := true
-PRODUCT_NO_CAMERA := false
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RISING_CHIPSET="SDM439" \
-    RISING_MAINTAINER="PHANTOM"
+WITH_GMS := false
 
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
