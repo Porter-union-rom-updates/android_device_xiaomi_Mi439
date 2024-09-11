@@ -116,38 +116,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-<<<<<<< HEAD
-# Extra packages
-PRODUCT_PACKAGES += \
-    RemovePackages \
-    CalcYou
-
 # Vanilla apps
-PRODUCT_PACKAGES += \
-    Dialer \
-    Messaging \
-    Contacts \
-    webview
-
-# Vibrator
-ifneq ($(TARGET_KERNEL_VERSION),4.19)
-=======
-# Vanilla apps
->>>>>>> 7d0b6ef79f03ff34d9c1c28b459e6e5977c753e6
 PRODUCT_PACKAGES += \
     Dialer \
     Messaging \
     Contacts \
     DeskClock \
     webview
-
-# Remove packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
-
-# Inherit viper4androidfx
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi439/Mi439-vendor.mk)

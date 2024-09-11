@@ -12,7 +12,6 @@ LOCAL_OVERRIDES_PACKAGES := \
     YouTube \
     BetterBugStub \
     CalculatorGooglePrebuilt \
-<<<<<<< HEAD
     CalendarGooglePrebuilt \
     Chrome-Stub \
     GoogleContacts \
@@ -33,9 +32,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     WebViewGoogle \
     WebViewGoogle-Stub \
     HealthIntelligenceStubPrebuilt
-=======
-    CalendarGooglePrebuilt
->>>>>>> 27729e77c4a887a3079ecc8b3656c96fcdef6ceb
+
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
