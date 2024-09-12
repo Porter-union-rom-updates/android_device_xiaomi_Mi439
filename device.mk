@@ -108,9 +108,7 @@ PRODUCT_PACKAGES += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    RemovePackages \
-    Accord \
-    CalcYou
+    RemovePackages
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
