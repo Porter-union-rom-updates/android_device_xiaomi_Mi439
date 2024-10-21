@@ -35,7 +35,7 @@ PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 
 ROM_FOLDER := lineage
-WITH_GMS := false
+WITH_GMS := ture 
 
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
