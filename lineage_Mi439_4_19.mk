@@ -33,9 +33,8 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := SDM439
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
-
 ROM_FOLDER := lineage
-WITH_GMS := true
+
 
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
