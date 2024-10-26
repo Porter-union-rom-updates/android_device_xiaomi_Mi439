@@ -5,13 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_Mi439.mk \
     $(LOCAL_DIR)/infinity_Mi439_4_19.mk
 
 COMMON_LUNCH_CHOICES := \
-    infinity_Mi439-user \
-    infinity_Mi439-userdebug \
-    infinity_Mi439-eng \
     infinity_Mi439_4_19-user \
     infinity_Mi439_4_19-eng \
     infinity_Mi439_4_19-userdebug
