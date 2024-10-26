@@ -26,6 +26,9 @@ def IncrementalOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
 
+# Disable VINTF checks
+  common.OPTIONS.skip_compatibility_check = True
+
 def AddImage(info, basename, dest):
   path = "IMAGES/" + basename
   if path not in info.input_zip.namelist():
