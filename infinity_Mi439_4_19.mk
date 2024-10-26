@@ -9,8 +9,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Project infinity stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Kernel
 TARGET_KERNEL_VERSION := 4.19
@@ -25,19 +25,40 @@ PRODUCT_PACKAGES += \
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
+# Maintainer Name
+INFINITY_MAINTAINER := "FARHAN-AFK" 
+
+# Whether the package supports BLURS
+TARGET_SUPPORTS_BLUR := false
+
+# Whether the device supports UDFPS (FOD)
+TARGET_HAS_UDFPS := false
+
+# Whether the compiled package ships Google Apps:
+WITH_GAPPS := false 
+
+# Whether the compiled shipped gapps package uses Google Dialer, Messaging, Contacts:
+TARGET_BUILD_GOOGLE_TELEPHONY := true
+
+# Whether the device supports screen off touchgestures:
+TARGET_SUPPORTS_TOUCHGESTURES := false
+
+# Whether the compiled package ships ViMusic
+TARGET_BUILD_VIMUSIC := true
+
+# Whether the compiled package ships Moto Calculator irrespective VANILLA or GAPPS:
+USE_MOTO_CALCULATOR := false
+ROM_FOLDER := infinity
+
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := Mi439_4_19
-PRODUCT_NAME := lineage_Mi439_4_19
+PRODUCT_NAME := infinity_Mi439_4_19
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := SDM439
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
-ROM_FOLDER := lineage
-
-
-# Signing
--include vendor/lineage-priv/keys/keys.mk
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
