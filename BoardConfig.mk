@@ -124,6 +124,7 @@ $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
 
 ifneq ($(WITH_GMS),true)
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 838860800 # 800 MB
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 314572800 # 300 MB
 endif
 
 # Power
@@ -163,3 +164,8 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
 include vendor/xiaomi/Mi439/BoardConfigVendor.mk
+
+# Missing Required Module
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/Phoneinfo.prop
