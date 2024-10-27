@@ -35,6 +35,17 @@ PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 ROM_FOLDER := lineage
 
+# Some Build Flags
+TARGET_BOOT_ANIMATION_RES := 720
+
+# Maintainer name for Everest
+EVEREST_MAINTAINER := "FARHAM AFK?"
+
+# Build GAPPS\Vanilla
+WITH_GAPPS := true
+
+# Quick witch (add more than one Launcher in build)
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
 
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
