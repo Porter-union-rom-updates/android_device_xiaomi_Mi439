@@ -35,6 +35,9 @@ PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 ROM_FOLDER := lineage
 
+# Google Camera Go and Google Gallery Go
+WITH_GOOGLE_CAM_GO := true
+
 # Some Build Flags
 TARGET_BOOT_ANIMATION_RES := 720
 
