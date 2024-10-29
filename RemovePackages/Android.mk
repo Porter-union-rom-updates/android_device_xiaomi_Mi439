@@ -5,53 +5,34 @@ LOCAL_MODULE := RemovePackages
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
-    AmbientSensePrebuilt \
-    AndroidAutoStubPrebuilt \
-    arcore \
-    Camera2 \
     Chrome \
-    Chrome-Stub \
-    ConnMO \
-    ConnMetrics \
-    DCMO \
-    DevicePolicyPrebuilt \
-    DMService \
     Drive \
-    Gallery \
-    Gallery2 \
-    GCS \
-    GoogleCamera \
+    Gmail2 \
     Maps \
-    Music \
-    MusicFX \
-    MyVerizonServices \
-    OBDM_Permissions \
-    obdm_stub \
-    OdadPrebuilt \
-    OemDmTrigger \
-    OPScreenRecord \
-    Ornament \
-    Photos \
-    PlayAutoInstallConfig \
-    PrebuiltGmail \
-    RecorderPrebuilt \
-    SafetyHubPrebuilt \
-    SCONE \
-    ScribePrebuilt \
-    Showcase \
-    Snap \
-    Snap2 \
-    SnapdragonCamera \
-    SoundAmplifierPrebuilt \
-    SprintDM \
-    SprintHM \
-    Tycho \
-    USCCDM \
-    Videos \
-    VZWAPNLib \
-    VzwOmaTrigger \
     YouTube \
-    YouTubeMusicPrebuilt
+    BetterBugStub \
+    CalculatorGooglePrebuilt \
+    CalendarGooglePrebuilt \
+    Chrome-Stub \
+    GoogleContacts \
+    PrebuiltDeskClockGoogle \
+    PrebuiltBugle \
+    TrichromeLibrary \
+    TrichromeLibrary-Stub \
+    GCS \
+    talkback \
+    WellbeingPrebuilt \
+    GoogleDialer \
+    DeviceIntelligenceNetworkPrebuilt \
+    DevicePersonalizationPrebuiltPixel2020 \
+    SafetyHubPrebuilt \
+    GoogleTTS \
+    TurboPrebuilt \
+    LatinIMEGooglePrebuilt \
+    WebViewGoogle \
+    WebViewGoogle-Stub \
+    HealthIntelligenceStubPrebuilt \
+    QuickSearchBox
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
