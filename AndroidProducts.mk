@@ -5,13 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/afterlife_Mi439.mk \
-    $(LOCAL_DIR)/afterlife_Mi439_4_19.mk
+    $(LOCAL_DIR)/spark_Mi439_4_19.mk
 
 COMMON_LUNCH_CHOICES := \
-    afterlife_Mi439-user \
-    afterlife_Mi439-userdebug \
-    afterlife_Mi439-eng \
-    afterlife_Mi439_4_19-user \
-    afterlife_Mi439_4_19-userdebug \
-    afterlife_Mi439_4_19-eng
+    spark_Mi439_4_19-user \
+    spark_Mi439_4_19-userdebug \
+    spark_Mi439_4_19-eng
