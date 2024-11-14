@@ -5,7 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-      $(LOCAL_DIR)/voltage_Mi439_4_19.mk
+      PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/voltage_Mi439_4_19.mk \
+    $(LOCAL_DIR)/lineage_Mi439_4_19.mk
+
 
 COMMON_LUNCH_CHOICES := \
     voltage_Mi439_4_19-user \
