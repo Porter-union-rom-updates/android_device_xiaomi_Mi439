@@ -36,6 +36,16 @@ TARGET_VENDOR := Xiaomi
 ROM_FOLDER := lineage
 #WITH_GMS := false
 
+# TenX stuff
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+#TARGET_SUPPORTS_QUICK_TAP := true
+#TARGET_EXCLUDES_AUDIOFX := true
+#TENX_BUILD_TYPE=Official
+
+
+
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
 
