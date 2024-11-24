@@ -1,2 +1,9 @@
 # Xiaomi Mi439 - FM Radio
 hw.fm.internal_antenna=1
+# droid x
+ro.droidx.maintainer= FARHAN AFK
+
+#Additional ** Props
+
+ro.droidx.chipset=SDM 439
+ro.droidx.display_resolution=6.67" IPS LCD 1080x2400
