@@ -34,7 +34,7 @@ PRODUCT_MODEL := SDM439
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 ROM_FOLDER := droidx
-WITH_GMS := false
+DROIDX_GAPPS := true
 
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
