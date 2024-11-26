@@ -43,7 +43,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_TOUCHGESTURES := true
 
 # Signing
--include vendor/lineage-priv/keys/keys.mk
+#-include vendor/lineage-priv/keys/keys.mk
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
