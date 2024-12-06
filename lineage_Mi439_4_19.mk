@@ -36,6 +36,14 @@ TARGET_VENDOR := Xiaomi
 ROM_FOLDER := lineage
 WITH_GMS := false
 
+# mistOS
+MISTOS_MAINTAINER="FARHAN AFK"
+TARGET_ENABLE_BLUR := true
+PRODUCT_NO_CAMERA := false
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+#WITH_GMS := false
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
 
