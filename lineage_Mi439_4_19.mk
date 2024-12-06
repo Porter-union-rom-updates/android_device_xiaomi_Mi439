@@ -43,6 +43,8 @@ PRODUCT_NO_CAMERA := false
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
 #WITH_GMS := false
 TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
 
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
