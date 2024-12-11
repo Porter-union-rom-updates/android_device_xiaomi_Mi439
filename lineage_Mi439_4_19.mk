@@ -34,7 +34,12 @@ PRODUCT_MODEL := SDM439
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 ROM_FOLDER := lineage
-WITH_GMS := false
+WITH_GMS := true
+
+# Additional Gapps Flags 
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
@@ -44,3 +49,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="olive-user 10 QKQ1.191014.001 V12.5.1.0.QCNMIXM release-keys"
     BuildFingerprint=Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNMIXM:user/release-keys
+
+PRODUCT_SYSTEM_PROPERTIES += \
+     ro.crdroid.maintainer=ƒαrhαη αƒκ
