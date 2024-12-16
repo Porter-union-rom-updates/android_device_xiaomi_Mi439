@@ -36,6 +36,20 @@ TARGET_VENDOR := Xiaomi
 ROM_FOLDER := lineage
 WITH_GMS := false
 
+# Device config
+TARGET_HAS_UDFPS := false
+TARGET_ENABLE_BLUR := false
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_LAWNCHAIR := true
+
+# Debugging
+TARGET_INCLUDE_MATLOG := false
+
+# Maintainer
+ALPHA_MAINTAINER := FARHAN AFK
+
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
 
