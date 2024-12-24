@@ -9,8 +9,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common pixelage stuff.
+$(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
 # Kernel
 TARGET_KERNEL_VERSION := 4.19
@@ -27,24 +27,26 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := Mi439_4_19
-PRODUCT_NAME := lineage_Mi439_4_19
+PRODUCT_NAME := pixelage_Mi439_4_19
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := SDM439
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
-ROM_FOLDER := lineage
-WITH_GMS := false
+# Pixelage
+PIXELAGE_BUILD := Mi439_4_19
 
-# mistOS
-MISTOS_MAINTAINER="FARHAN AFK"
-TARGET_ENABLE_BLUR := true
-PRODUCT_NO_CAMERA := false
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
-#WITH_GMS := false
+# Extra Flags
+WITH_GMS := false 
 TARGET_DEFAULT_PIXEL_LAUNCHER := true
-TARGET_HAS_UDFPS := true
-EXTRA_UDFPS_ANIMATIONS := true
+TARGET_ENABLE_BLUR := true
+TARGET_HAS_UDFPS := false
+
+# These shortcut to fix error 
+ROM_FOLDER := pixelage
+
+# Boot animation resolution.
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
