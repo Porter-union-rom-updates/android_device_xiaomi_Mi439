@@ -36,6 +36,16 @@ TARGET_VENDOR := Xiaomi
 ROM_FOLDER := lineage
 #WITH_GMS := false
 
+# RisingOS stuff 
+TARGET_BOOT_ANIMATION_RES := 729
+TARGET_ENABLE_BLUR := true
+#RISING_OFFICIAL := true
+#WITH_GMS := true
+TARGET_CORE_GMS := true
+PRODUCT_NO_CAMERA := false
+RISING_MAINTAINER := AFK FARHAN
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+
 # Signing
 -include vendor/lineage-priv/keys/keys.mk
 
@@ -44,3 +54,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="olive-user 10 QKQ1.191014.001 V12.5.1.0.QCNMIXM release-keys"
     BuildFingerprint=Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNMIXM:user/release-keys
+
+
+# Rising specific prop overrides
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="SDM 439" \
+    RisingMaintainer="AFK FARHAN"
