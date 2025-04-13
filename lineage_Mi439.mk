@@ -39,3 +39,19 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="olive-user 10 QKQ1.191014.001 V12.5.1.0.QCNMIXM release-keys"
     BuildFingerprint=Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNMIXM:user/release-keys
+
+# Gapps.
+TARGET_DISABLES_GMS := true
+WITH_GMS := false
+
+# Misc.
+AXION_CAMERA_REAR_INFO := 12
+AXION_CAMERA_FRONT_INFO := 8
+AXION_MAINTAINER := FARHAN_EXAM
+AXION_PROCESSOR := Qualcomm_Snapdragon_439
+TARGET_INCLUDE_VIPERFX := true
+# Recognized ROM As.
+ROM_FOLDER := lineage
+
+# Boot animation resolution.
+TARGET_BOOT_ANIMATION_RES := 720
