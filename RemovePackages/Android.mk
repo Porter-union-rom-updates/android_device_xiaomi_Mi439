@@ -9,7 +9,6 @@ LOCAL_OVERRIDES_PACKAGES := \
     Drive \
     Gmail2 \
     Maps \
-<<<<<<< HEAD
     WifiResCommon_Sys \
     SoundAmplifierPrebuilt_v4.7.638126989 \
     TrichromeLibrary-Stub \
@@ -60,8 +59,6 @@ LOCAL_OVERRIDES_PACKAGES := \
     VZWAPNLib \
     VzwOmaTrigger \
     WallpapersBReel2020 \
-=======
->>>>>>> ad6d000 (Derpfest adaptations)
     YouTube \
     BetterBugStub \
     CalculatorGooglePrebuilt \
@@ -72,17 +69,12 @@ LOCAL_OVERRIDES_PACKAGES := \
     PrebuiltBugle \
     TrichromeLibrary \
     TrichromeLibrary-Stub \
-    GCS \
-<<<<<<< HEAD
-=======
     talkback \
->>>>>>> ad6d000 (Derpfest adaptations)
     WellbeingPrebuilt \
     GoogleDialer \
     DeviceIntelligenceNetworkPrebuilt \
     DevicePersonalizationPrebuiltPixel2020 \
     SafetyHubPrebuilt \
-<<<<<<< HEAD
     TurboPrebuilt \
     HealthIntelligenceStubPrebuilt \
     QuickSearchBox \
@@ -101,12 +93,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     YouTube
 =======
     GoogleTTS \
-    TurboPrebuilt \
-    LatinIMEGooglePrebuilt \
-    WebViewGoogle \
-    WebViewGoogle-Stub \
-    HealthIntelligenceStubPrebuilt
->>>>>>> ad6d000 (Derpfest adaptations)
+
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null

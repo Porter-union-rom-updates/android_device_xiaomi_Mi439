@@ -10,12 +10,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common LineageOS stuff.
-<<<<<<< HEAD:lineage_Mi439_4_19.mk
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-=======
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
->>>>>>> ad6d000 (Derpfest adaptations):derp_Mi439_4_19.mk
 
 # Kernel
 TARGET_KERNEL_VERSION := 4.19
