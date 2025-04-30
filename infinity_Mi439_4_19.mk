@@ -9,9 +9,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common LineageOS stuff.
+# Inherit some common infinityX  stuff.
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Kernel
 TARGET_KERNEL_VERSION := 4.19
@@ -28,7 +28,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := Mi439_4_19
-PRODUCT_NAME := lineage_Mi439_4_19
+PRODUCT_NAME := infinity_Mi439_4_19
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := SDM439
@@ -43,16 +43,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Gapps.
 TARGET_DISABLES_GMS := true
-WITH_GMS := false
+WITH_GMS := ture 
 
 # Misc.
-AXION_CAMERA_REAR_INFO := 12
-AXION_CAMERA_FRONT_INFO := 8
-AXION_MAINTAINER := FARHAN_EXAM
-AXION_PROCESSOR := Qualcomm_Snapdragon_439
-TARGET_INCLUDE_VIPERFX := true
 # Recognized ROM As.
-ROM_FOLDER := lineage
+ROM_FOLDER := infinity
 
 # Boot animation resolution.
 TARGET_BOOT_ANIMATION_RES := 720
