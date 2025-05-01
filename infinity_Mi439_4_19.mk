@@ -43,7 +43,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Gapps.
 TARGET_DISABLES_GMS := true
-WITH_GMS := ture 
 
 # Misc.
 # Recognized ROM As.
@@ -51,3 +50,9 @@ ROM_FOLDER := infinity
 
 # Boot animation resolution.
 TARGET_BOOT_ANIMATION_RES := 720
+
+
+# Extra Stuffs
+INFINITY_MAINTAINER := FARHAN_AFK(jisan)
+TARGET_BUILD_VIMUSIC := true
+USE_MOTO_CALCULATOR := true
